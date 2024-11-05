@@ -1,9 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdFragment"
-    android:background="@color/red">
+    android:padding="16dp">
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+    <View
+        android:id="@+id/cuadroRojo"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="16dp"
+        android:background="#FF0000"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/btnGrabar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/cuadroRojo"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/grabar"
+        android:contentDescription="Botón de grabación" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGrabar"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Cancelar"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnVerGrabaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCancelar"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Ver Grabaciones" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnVerGrabaciones"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Estado de grabación"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/timerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusText"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="00:00"
+        android:textSize="18sp"
+        android:textColor="#FF0000" />
+</RelativeLayout>

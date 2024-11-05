@@ -22,7 +22,7 @@
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <action
-            android:id="@+id/action_secondFragment_to_thirdFragment2"
+            android:id="@+id/action_secondFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
         <argument
             android:name="name"
@@ -33,5 +33,13 @@
         android:id="@+id/thirdFragment"
         android:name="com.example.navigationcomponentexample.ThirdFragment"
         android:label="fragment_third"
-        tools:layout="@layout/fragment_third" />
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_listaGrabacionesFragment"
+            app:destination="@id/listaGrabacionesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaGrabacionesFragment"
+        android:name="com.example.navigationcomponentexample.ListaGrabacionesFragment"
+        android:label="ListaGrabacionesFragment" />
 </navigation>

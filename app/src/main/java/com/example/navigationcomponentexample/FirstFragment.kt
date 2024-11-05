@@ -21,7 +21,7 @@ class FirstFragment : Fragment() {
 
         val btnNavigate=root.findViewById<Button>(R.id.btnNavigate)
         btnNavigate.setOnClickListener {
-            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(name = "Cristhian Lozano"))
+            findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(name = "Bienvenido"))
         }
 
 
