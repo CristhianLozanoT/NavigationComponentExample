@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CamaraFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Vista de la cámara -->
+        <androidx.camera.view.PreviewView
+            android:id="@+id/viewFinder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Botón de tomar foto (rojo) -->
+        <ImageView
+            android:id="@+id/ivBtnCamara"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="46dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/btn_camara" />
+
+        <!-- Botón de vista previa de la foto, a la izquierda del botón rojo -->
+        <ImageView
+            android:id="@+id/ivPhotoPreview"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivBtnCamara"
+            app:layout_constraintEnd_toStartOf="@id/ivBtnCamara"
+            android:contentDescription="Preview de la foto tomada"
+            android:scaleType="centerCrop" />
+
+        <!-- Botón para cambiar de cámara, a la derecha del botón rojo -->
+        <ImageView
+            android:id="@+id/btnSwitchCamera"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivBtnCamara"
+            app:layout_constraintStart_toEndOf="@id/ivBtnCamara"
+            app:srcCompat="@drawable/cambiar_camara" />
+
+        <!-- Botón de flash en la parte superior izquierda -->
+        <ImageView
+            android:id="@+id/btnFlash"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/ic_flash_off"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="Flash" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

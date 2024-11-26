@@ -1,15 +1,21 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/gradient_background">
 
+    <!-- Logo -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo"
+        android:contentDescription="Logo de la aplicación"
+        android:elevation="8dp" />
 
+    <!-- Línea roja (se muestra al grabar) -->
     <View
         android:id="@+id/cuadroRojo"
         android:layout_width="match_parent"
@@ -19,6 +25,7 @@
         android:background="#FF0000"
         android:visibility="gone" />
 
+    <!-- Botón de grabar -->
     <ImageView
         android:id="@+id/btnGrabar"
         android:layout_width="100dp"
@@ -27,8 +34,11 @@
         android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/grabar"
-        android:contentDescription="Botón de grabación" />
+        android:contentDescription="Botón de grabación"
+        android:background="@drawable/button_rounded"
+        android:elevation="10dp" />
 
+    <!-- Botón de cancelar -->
     <Button
         android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
@@ -37,8 +47,12 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:text="Cancelar"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:background="@drawable/button_rounded"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
+    <!-- Botón de ver grabaciones -->
     <Button
         android:id="@+id/btnVerGrabaciones"
         android:layout_width="wrap_content"
@@ -46,8 +60,12 @@
         android:layout_below="@id/btnCancelar"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
-        android:text="Ver Grabaciones" />
+        android:text="Ver Grabaciones"
+        android:background="@drawable/button_rounded"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
+    <!-- Texto de estado -->
     <TextView
         android:id="@+id/statusText"
         android:layout_width="wrap_content"
@@ -57,8 +75,10 @@
         android:layout_centerHorizontal="true"
         android:text="Estado de grabación"
         android:textSize="16sp"
-        android:textColor="#000000" />
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-condensed" />
 
+    <!-- Temporizador -->
     <TextView
         android:id="@+id/timerText"
         android:layout_width="wrap_content"
@@ -68,5 +88,7 @@
         android:layout_centerHorizontal="true"
         android:text="00:00"
         android:textSize="18sp"
-        android:textColor="#FF0000" />
+        android:textColor="#FF0000"
+        android:fontFamily="monospace"
+        android:textStyle="bold" />
 </RelativeLayout>

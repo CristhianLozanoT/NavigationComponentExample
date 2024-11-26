@@ -1,0 +1,73 @@
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp"
+android:background="@drawable/gradient_background">
+
+<!-- Input para el nombre -->
+<EditText
+    android:id="@+id/etNombre"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Nombre"
+    android:textColor="@color/black"
+    android:padding="12dp"
+    android:textColorHint="@color/white" />
+
+<!-- Espaciado entre los campos -->
+<Space android:layout_width="match_parent" android:layout_height="16dp" />
+
+<!-- Input para el apellido -->
+<EditText
+    android:id="@+id/etApellido"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Apellido"
+    android:textColor="@color/black"
+    android:padding="12dp"
+    android:textColorHint="@color/white" />
+
+<!-- Espaciado entre los botones -->
+<Space android:layout_width="match_parent" android:layout_height="16dp" />
+
+<!-- Botón para registrar usuario -->
+<Button
+    android:id="@+id/btnRegistrar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Registrar Usuario"
+    android:textColor="@color/white"
+    android:backgroundTint="@color/blue"
+    android:textStyle="bold"
+    android:padding="12dp" />
+
+<!-- Espaciado entre los botones -->
+<Space android:layout_width="match_parent" android:layout_height="16dp" />
+
+<!-- Botón para eliminar todos los usuarios -->
+<Button
+    android:id="@+id/btnEliminarTodos"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Eliminar Todos los Usuarios"
+    android:textColor="@color/white"
+    android:backgroundTint="@color/red"
+    android:textStyle="bold"
+    android:padding="12dp" />
+
+<!-- Espaciado entre el ListView y el resto -->
+<Space android:layout_width="match_parent" android:layout_height="16dp" />
+
+<!-- ListView para mostrar los usuarios -->
+<ListView
+    android:id="@+id/lvUsuarios"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:divider="@android:color/darker_gray"
+    android:dividerHeight="1dp"
+    android:elevation="8dp"
+    android:padding="8dp" />
+</LinearLayout>

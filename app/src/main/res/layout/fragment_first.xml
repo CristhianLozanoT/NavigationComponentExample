@@ -3,15 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment"
-    android:background="@color/green">
-    <Button
-        android:layout_gravity="center"
-        android:id="@+id/btnNavigate"
+    tools:context=".view.FirstFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background" />
+
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Navegar"/>
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="Aplicación en Android"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:fontFamily="sans-serif-condensed" />
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Descubre una experiencia única con nuestra app: desde navegación fluida con MVVM y Navigation Component hasta integración avanzada con cámara, grabación de audio y gestión de datos. ¡Todo lo que necesitas, en un solo lugar!"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 
-
+    <Button
+        android:id="@+id/btnNavigate"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="¡Explorar!"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#8A2BE2"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:background="@drawable/button_rounded" />
 
 </FrameLayout>

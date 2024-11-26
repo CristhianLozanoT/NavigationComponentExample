@@ -1,4 +1,4 @@
-package com.example.navigationcomponentexample
+package com.example.navigationcomponentexample.view
 
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import java.io.File
+import com.example.navigationcomponentexample.R
 import java.io.IOException
 
 class ListaGrabacionesFragment : Fragment() {

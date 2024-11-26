@@ -1,25 +1,78 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment"
-    android:background="@color/blue">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/gradient_background"
+    tools:context=".view.SecondFragment">
 
+    <!-- Título principal -->
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        android:text="Selecciona una Opción"
+        android:textColor="@android:color/white"
         android:textStyle="bold"
-        android:textSize="40sp"
-        tools:text="Hola"/>
+        android:textSize="28sp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:fontFamily="sans-serif-condensed" />
 
+    <!-- Descripción -->
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Elige entre grabar audio, usar la cámara o acceder a la base de datos. ¡Es fácil y rápido!"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textAlignment="center" />
+
+    <!-- Botón para ir a la grabadora -->
     <Button
         android:id="@+id/btnGoToRecorder"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="50dp"
-        android:text="Ir a Grabadora" />
-</FrameLayout>
+        android:layout_marginBottom="16dp"
+        android:paddingVertical="12dp"
+        android:background="@drawable/button_rounded"
+        android:text="Ir a la Grabadora"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:elevation="5dp" />
+
+    <!-- Botón para ir a la cámara -->
+    <Button
+        android:id="@+id/btnGoToCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:paddingVertical="12dp"
+        android:background="@drawable/button_rounded"
+        android:text="Ir a la Cámara"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:elevation="5dp" />
+
+    <!-- Botón para ir a la base de datos -->
+    <Button
+        android:id="@+id/btnGoToDatabase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:background="@drawable/button_rounded"
+        android:text="Ir a la Base de Datos"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:elevation="5dp" />
+</LinearLayout>
